@@ -12,6 +12,6 @@ export const UseGetDosage = () => useQuery<getDosageType[], string, any>({
     queryFn: async () => (await axios.get(`/dosage/search`)).data,
 });
 
-export const UseCreateCustomer = () => useMutation<void, string, createHistoryTyps>({
-    mutationFn: async ({ userId, ...rest }) => await axios.post("/customers", rest, { params: userId })
+export const UseCreateHistory = () => useMutation<void, string, createHistoryTyps>({
+    mutationFn: async ({ userId, ...rest }) => await axios.post("/doasage/history", rest, { params: userId })
 })

@@ -5,6 +5,5 @@ export type getDosageType = {
 }
 export type createHistoryTyps = {
     userId: string,
-    drugname: string,
-    zipcode: number
+    searchTerm: string
 }

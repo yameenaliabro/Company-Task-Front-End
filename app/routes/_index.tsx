@@ -3,7 +3,6 @@ import { AuthGuard } from "~/guard";
 import { Provider } from "~/utils";
 import Home from "./Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
 const queryClient = new QueryClient();
 
 export const meta: V2_MetaFunction = () => {
@@ -20,6 +19,7 @@ export default function Index() {
         <Provider>
           <AuthGuard>
             <Home />
+
           </AuthGuard>
         </Provider>
       </div>
