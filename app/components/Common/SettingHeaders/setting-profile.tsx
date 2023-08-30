@@ -3,7 +3,7 @@ import { headerawrrow } from "~/assets/Images"
 
 function SettingHeader({ checkscreen }: { checkscreen: boolean }) {
     return (
-        <div className="w-[480px] h-[129px]  bg-mdcard ">
+        <div className="w-[494px] h-[129px]  bg-mdcard ">
             {checkscreen ?
                 <div className="w-[263px] h-[91px] top-[35px]  gap-16px absolute" >
                     <Typography.Title level={3} className="!relative top-[22px] left-[40px]">Setting</Typography.Title>
