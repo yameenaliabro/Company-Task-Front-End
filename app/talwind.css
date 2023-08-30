@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../Poppins-Regular.ttf");
+    src: url("../app/assets/fonts/Poppins-Regular.ttf") format('truetype');
 }
 
 html,
@@ -13,11 +13,11 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Poppins" !important;
 }
 
 * {
     box-sizing: border-box;
+    font-family: "Poppins" !important;
 }
 
 #__next {
@@ -39,4 +39,17 @@ body {
     max-height: 750px !important;
     width: 365px;
     max-width: 600px;
+}
+
+.med-container {
+    max-height: 150px !important;
+    overflow-y: scroll !important;
+    width: 383px !important;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.med-container::-webkit-scrollbar {
+    display: none;
 }

@@ -17,7 +17,7 @@ const SearchCard = () => {
     return (
         <div className='ml-[13px]'>
             <Card
-                className='w-[358px] h-[99px] p-5'>
+                className='w-[358px] h-[99px]'>
                 <div className='w-[342px] h-[22px]'>
                     <Typography.Text className='font-semibold text-primary font-sans  leading-20'>DEXTROAMPHETAMINE- AMPHET ER</Typography.Text>
                 </div>

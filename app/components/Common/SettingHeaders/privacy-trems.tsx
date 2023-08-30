@@ -3,7 +3,7 @@ import { headerawrrow } from "~/assets/Images"
 function PrivayTerms({ checkscreen }: { checkscreen: boolean }) {
     return (
 
-        <div className="w-[460px] h-[130px]  bg-mdcard ">
+        <div className="w-[480px] h-[130px]  bg-mdcard ">
             {checkscreen ?
                 <div className="w-[300px] h-[91px] top-[50px] left-[24px] gap-16px absolute  flex justify-between flex-row" >
                     <Image src={headerawrrow} className="w-[30px] h-[30px] " preview={false} />
