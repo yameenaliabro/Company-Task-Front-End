@@ -3,15 +3,15 @@ import CardBg from '~/components/Base/CardBg'
 import { FieldTimeOutlined } from "@ant-design/icons"
 import { SearchCard } from '~/components/Common'
 import { useState } from "react"
-import { UseCreateHistory, UseGetDosageBySearch } from "~/apis/search"
+import { UseGetDosageBySearch } from "~/apis/search"
 import type { getDosageType } from "~/types/search"
 const Search = () => {
-    const { mutateAsync: createhistory } = UseCreateHistory()
+    // const { mutateAsync: createhistory } = UseCreateHistory()
     const [searchTerm, setSearchTerm] = useState("");
     const searchdata = UseGetDosageBySearch(searchTerm)
     const medData = searchdata?.data?.data
-    const create = createhistory({ searchTerm, userId: "" })
-    console.log("🚀 ~ file: index.tsx:14 ~ Search ~ create :", create)
+    // const create = createhistory({ searchTerm, userId: "" })
+    // console.log("🚀 ~ file: index.tsx:14 ~ Search ~ create :", create)
 
     return (
         <div>

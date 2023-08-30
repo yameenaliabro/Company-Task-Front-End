@@ -8,13 +8,13 @@ const MainHome = () => {
                 <Container>
                     <div className="flex justify-center items-center">
                         <div className="flex justify-center items-center">
-                            <Card className="w-[345px] h-[218.99px] bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 rounded-16 flex justify-center flex-col">
+                            <Card className="w-[345px] h-[218.99px] bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 rounded-16 flex justify-center flex-col ml-20">
                                 <div className="flex justify-center flex-col ">
                                     <div className="flex justify-center flex-col">
                                         <Typography.Title level={3} className="text-para flex flex-1">BaxRx</Typography.Title>
                                         <Typography.Text className="flex flex-1 leading-20 text-para mt-[0px] pb-[0px]">Prescription Discount Card</Typography.Text>
                                     </div>
-                                    <div className="flex justify-center">
+                                    <div className="flex justify-center ml-[20px]">
                                         <Row className="flex flex-row justify-around  w-[326px] h-[44px] mt-10  fle">
                                             <Col className="w-[67px] h-[44px] gap-8">
                                                 <Typography.Text className="text-para font-semibold leading-16 font-sans" > Member ID</Typography.Text>
@@ -35,9 +35,6 @@ const MainHome = () => {
 
                                         </Row>
                                     </div>
-                                    {/* <div className="w-[358px] h-[35px]  rounded-16 bg-fb  text-center !ml-[19px] relative mt-0">
-                                    <Typography.Text className="font-sans font-semibold text-size leading-20 text-para text-center mt-2">Discount only. Not insurance.</Typography.Text>
-                                </div> */}
                                 </div>
                             </Card>
                         </div>
