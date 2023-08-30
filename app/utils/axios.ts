@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-    baseURL: "http://localhost:5000"
+    baseURL: "https://teal-zebra-coat.cyclic.app/"
 })
 
 axios.interceptors.response.use(
