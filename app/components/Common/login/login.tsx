@@ -31,7 +31,7 @@ const LoginPage = () => {
                     labelCol={{ span: 6 }}
                     onFinish={onFinish}
                     disabled={loading}
-                    className='w-[358px] flex justify-center flex-col'
+                    className='w-[358px] flex justify-center flex-col '
                 // form={form}
                 >
                     <label className="text-primary text-[18] font-medium">UserName</label>
@@ -50,9 +50,9 @@ const LoginPage = () => {
                         ]}>
                         <Input.Password type='' placeholder='enter a password...' />
                     </Form.Item>
-                    <Form.Item valuePropName="checked" className="flex  flex-1  text-end flex-row">
+                    <Form.Item valuePropName="checked" className="flex flex-row">
                         <Checkbox className="text-primary">Remember me</Checkbox>
-                        <Button type="link" className="ml-20">Forgot your password?</Button>
+                        <Button type="link" className="ml-8">Forgot your password?</Button>
                     </Form.Item>
                     <Form.Item>
                         <Button type='primary' htmlType='submit' block >Log  in</Button>

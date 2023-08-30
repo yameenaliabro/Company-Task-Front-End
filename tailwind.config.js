@@ -10,22 +10,32 @@ module.exports = {
         card: "#F9862F",
         para: "#FFFFFF",
         mdcard: "#FEE1CA",
-        fb: "#E68D49"
-
+        fb: "#E68D49",
+        hb: "#FEE1CA"
+      },
+      padding: {
+        primary: "16px, 8px, 16px, 8px"
       },
       borderRadius: {
         radius: "0px 0px 40px 40px ",
         16: "16px",
         fr: "0px, 0px, 15px, 15px",
-        10: "10px"
+        10: "10px",
+        15: "15px"
       },
       fontSize: {
         size: "15px",
-        13: "13px"
+        13: "13px",
+        10: "10px"
+
+      },
+      letterSpacing: {
+        2: "2px"
       },
       lineHeight: {
         20: "20.43px",
-        16: "16.34px"
+        16: "16.34px",
+        19: "19.5px",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

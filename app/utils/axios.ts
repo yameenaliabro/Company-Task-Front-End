@@ -1,5 +1,4 @@
 import Axios from "axios";
-import { message } from "antd";
 
 const axios = Axios.create({
     baseURL: "http://localhost:5000"
@@ -9,7 +8,6 @@ axios.interceptors.response.use(
     (res) => res,
     (err) => {
         const errorMessage = err.ree || err.message
-        message.error(errorMessage)
         Promise.reject(errorMessage)
     }
 )

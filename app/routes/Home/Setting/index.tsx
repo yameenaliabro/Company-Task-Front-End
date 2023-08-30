@@ -1,14 +1,13 @@
-import React from 'react'
-import { Card, Layout, Tabs } from "antd"
+import { Card } from "antd"
+import SettingHeader from "~/components/Common/SettingHeaders/setting-profile"
 const Setting = () => {
-    const { Header } = Layout
     return (
-        <Card>
-            <Tabs>
-                <Header className='bg-bgprimary'>Seeting</Header>
-            </Tabs>
+        <Card className='bg-bgprimary h-[600px]' cover={<SettingHeader checkscreen={true} />} >
+            <div>
+
+            </div>
         </Card>
     )
 }
 
-export default Setting
+export default Setting 

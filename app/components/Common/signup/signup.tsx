@@ -26,7 +26,8 @@ const SignUpPage = () => {
                 <Form
                     labelCol={{ span: 6 }}
                     onFinish={onFinish}
-                    className='!w-[358] flex flex-col'
+                    className='w-[358px] flex justify-center flex-col '
+
                     disabled={loading}
                 >
                     <label className="text-primary text-[18] font-medium">UserName</label>
