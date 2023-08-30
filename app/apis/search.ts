@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import type { createHistoryTyps, getDosageType } from "~/types/search";
-import axios from "~/utils/axios";
+import type { createHistoryTyps, getDosageType } from "../types/search";
+import axios from "../utils/axios";
 
 export const UseGetDosageBySearch = (searchTerm: string) => useQuery<getDosageType[], string, any>({
     queryKey: ["dosage", searchTerm],

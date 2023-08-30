@@ -1,6 +1,6 @@
-import { useAuth } from "~/hooks";
+import { useAuth } from "../hooks";
 import type { ReactNode } from "react"
-import AuthTabs from "~/routes/auth";
+import AuthTabs from "../routes/auth";
 
 function AuthGuard({ children }: { children: ReactNode }) {
     const { isAuthenticated, userdata } = useAuth();

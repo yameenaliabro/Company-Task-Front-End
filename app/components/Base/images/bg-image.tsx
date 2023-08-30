@@ -1,5 +1,5 @@
 import { Image } from "antd"
-import { bg1, bg2 } from '~/assets/Images'
+import { bg1, bg2 } from '../../../assets/Images'
 const BgImage = () => {
     return (
         <div>

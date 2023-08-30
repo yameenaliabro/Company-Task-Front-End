@@ -1,8 +1,8 @@
 import { useCallback, type ReactNode, useMemo, createContext, useState, useEffect } from 'react'
-import { UseLogin, UseRegister } from '~/apis'
-import type { AuthContextType, RegisternType, UserType, loginTypes } from '~/types'
-import { removeAxiosToken, setaxiostoken } from '~/utils/axios'
-import { Loading } from '~/components/Base'
+import { UseLogin, UseRegister } from '../apis'
+import type { AuthContextType, RegisternType, UserType, loginTypes } from '../types'
+import { removeAxiosToken, setaxiostoken } from '../utils/axios'
+import { Loading } from '../components/Base'
 
 const AuthContext = createContext<AuthContextType | null>(null)
 const AuthProvider = ({ children }: { children: ReactNode }) => {

@@ -1,5 +1,5 @@
 import { Typography, Image } from "antd"
-import { headerawrrow } from "~/assets/Images"
+import { headerawrrow } from "../../../assets/Images"
 
 function SettingHeader({ checkscreen }: { checkscreen: boolean }) {
     return (

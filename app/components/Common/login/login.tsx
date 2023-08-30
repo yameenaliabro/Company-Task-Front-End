@@ -1,10 +1,10 @@
 
 import { Link } from "@remix-run/react"
 import { Card, Typography, Form, Input, Button, message, Checkbox } from "antd"
-import { SSO } from "~/components/Base"
-import BgImage from "~/components/Base/images/bg-image"
-import { useAuth } from "~/hooks"
-import { type loginTypes } from "~/types"
+import { SSO } from "../../Base"
+import BgImage from "../../Base/images/bg-image"
+import { useAuth } from "../../../hooks"
+import { type loginTypes } from "../../../types"
 const LoginPage = () => {
     const { login, } = useAuth()
     // const [form] = useForm()

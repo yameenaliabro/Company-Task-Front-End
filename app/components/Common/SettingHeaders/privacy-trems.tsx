@@ -1,5 +1,5 @@
 import { Image, Typography } from "antd"
-import { headerawrrow } from "~/assets/Images"
+import { headerawrrow } from "../../../assets/Images"
 function PrivayTerms({ checkscreen }: { checkscreen: boolean }) {
     return (
 

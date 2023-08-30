@@ -1,6 +1,6 @@
-import CardBg from "~/components/Base/CardBg"
+import CardBg from "../../../components/Base/CardBg"
 import { Typography, Card, Col, Row } from "antd"
-import Container from "~/components/Base/Container"
+import Container from "../../../components/Base/Container"
 const MainHome = () => {
     return (
         <div className="flex justify-center items-center w-full" >

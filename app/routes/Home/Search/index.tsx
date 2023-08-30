@@ -1,11 +1,11 @@
 import { Card, Form, Input, Button, Typography, Row, Col } from "antd"
-import CardBg from '~/components/Base/CardBg'
+import CardBg from '../../../components/Base/CardBg'
 import { FieldTimeOutlined } from "@ant-design/icons"
-import { SearchCard } from '~/components/Common'
+import { SearchCard } from '../../../components/Common'
 import { useState } from "react"
-import { UseGetDosageBySearch } from "~/apis/search"
-import type { getDosageType } from "~/types/search"
-import SearchHistoryModal from "~/components/Common/HistoryModal"
+import type { getDosageType } from "../../../types/search"
+import SearchHistoryModal from "../../../components/Common/HistoryModal"
+import { UseGetDosageBySearch } from "../../../apis"
 const Search = () => {
     // const { mutateAsync: createhistory } = UseCreateHistory()
     const [searchTerm, setSearchTerm] = useState("");

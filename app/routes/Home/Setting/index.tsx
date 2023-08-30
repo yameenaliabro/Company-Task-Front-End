@@ -1,6 +1,6 @@
 import { Card, Tabs } from "antd"
-import SettingCard from "~/components/Common/SettingCard"
-import SettingHeader from "~/components/Common/SettingHeaders/setting-profile"
+import SettingCard from "../../../components/Common/SettingCard"
+import SettingHeader from "../../../components/Common/SettingHeaders/setting-profile"
 import EditProfile from "./EditProfile"
 import TermsCondition from "./TermCondition"
 import PrivacyPolicy from "./PrivacyPolicy"

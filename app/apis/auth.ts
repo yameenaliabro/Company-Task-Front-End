@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
-import type { RegisternType, UserType, loginTypes } from "~/types";
-import axios from "~/utils/axios";
+import type { RegisternType, UserType, loginTypes } from "../types";
+import axios from "../utils/axios";
 
 export const UseLogin = () => useMutation<string, Error, loginTypes>({
     mutationFn: async (props) => (await axios.post("/auth/login", props)).data

@@ -1,6 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import { AuthGuard } from "~/guard";
-import { Provider } from "~/utils";
+import { AuthGuard } from "../guard";
+import { Provider } from "../utils";
 import Home from "./Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();

@@ -9,7 +9,7 @@ import {
 } from "@remix-run/react";
 
 // Import your stylesheets' paths
-import stylesheet from "~/talwind.css";
+import stylesheet from "./talwind.css";
 import styles from "antd/dist/reset.css";
 export const links: LinksFunction = () => [
   // Use the paths of the imported stylesheets

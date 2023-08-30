@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Card, Avatar, Typography, Image, Modal, Button, } from "antd"
 import { UserOutlined, MailOutlined, InfoCircleOutlined, PoweroffOutlined, RedEnvelopeOutlined, InfoOutlined } from "@ant-design/icons"
-import { arrow } from '~/assets/Images'
-import { useAuth } from '~/hooks'
+import { arrow } from '../../../assets/Images'
+import { useAuth } from '../../../hooks'
 const SettingCard = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const { signout } = useAuth()

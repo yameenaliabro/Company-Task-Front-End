@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Typography, Card } from 'antd';
 
-import PrivayTerms from '~/components/Common/SettingHeaders/privacy-trems'
+import PrivayTerms from '../../../../components/Common/SettingHeaders/privacy-trems'
 const TermsCondition = () => {
 
     const { Text } = Typography;

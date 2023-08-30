@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react"
 import { Card, Form, Input, Button, Typography } from "antd"
-import { BGImage, SSO } from "~/components/Base"
-import { useAuth } from '~/hooks'
-import { type RegisternType } from "~/types"
+import { BGImage, SSO } from "../../Base"
+import { useAuth } from '../../../hooks'
+import { type RegisternType } from "../../../types"
 
 const SignUpPage = () => {
     const { signup, userdata } = useAuth()

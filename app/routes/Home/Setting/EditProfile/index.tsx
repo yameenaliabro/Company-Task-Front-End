@@ -1,5 +1,5 @@
 import { Form, Input, Card, DatePicker, Button } from 'antd';
-import SettingHeader from '~/components/Common/SettingHeaders/setting-profile';
+import SettingHeader from '../../../../components/Common/SettingHeaders/setting-profile';
 
 const EditProfile = () => {
 
