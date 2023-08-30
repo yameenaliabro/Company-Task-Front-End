@@ -10,15 +10,17 @@ export type RegisternType = {
 }
 
 export type UserType = {
-    token: string;
-    user: {
-        _id: string;
-        username: string;
-        email: string;
-        password: string;
-        createdAt: string;
-        updatedAt: string;
-        __v: number;
+    data: {
+        token: string;
+        user: {
+            createdAt: string;
+            email: string;
+            password: string;
+            updatedAt: string;
+            username: string;
+            __v: number;
+            _id: string;
+        };
     };
 };
 

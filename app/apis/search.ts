@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { type getDosageType } from "~/types/search";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import type { createHistoryTyps, getDosageType } from "~/types/search";
 import axios from "~/utils/axios";
 
 export const UseGetDosageBySearch = (searchTerm: string) => useQuery<getDosageType[], string, any>({
@@ -7,7 +7,11 @@ export const UseGetDosageBySearch = (searchTerm: string) => useQuery<getDosageTy
     queryFn: async () => (await axios.get(`/dosage/search?drugname=${searchTerm}`)).data,
 });
 
-export const UseGetDosage = () => useQuery<getDosageType[], string>({
+export const UseGetDosage = () => useQuery<getDosageType[], string, any>({
     queryKey: ["dosage",],
     queryFn: async () => (await axios.get(`/dosage/search`)).data,
 });
+
+export const UseCreateCustomer = () => useMutation<void, string, createHistoryTyps>({
+    mutationFn: async ({ userId, ...rest }) => await axios.post("/customers", rest, { params: userId })
+})

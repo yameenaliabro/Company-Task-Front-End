@@ -15,9 +15,9 @@ const SearchCard = () => {
         setopenmodal(false);
     };
     return (
-        <div>
+        <div className='ml-[13px]'>
             <Card
-                className='w-[358px] h-[99px]'>
+                className='w-[358px] h-[99px] p-5'>
                 <div className='w-[342px] h-[22px]'>
                     <Typography.Text className='font-semibold text-primary font-sans  leading-20'>DEXTROAMPHETAMINE- AMPHET ER</Typography.Text>
                 </div>

@@ -6,7 +6,7 @@ import Search from "./Search";
 // import PrivacyPolicy from "./Setting/PrivacyPolicy";
 // import TermsCondition from "./Setting/TermCondition";
 // import EditProfile from "./Setting/EditProfile";
-import SettingCard from "~/components/Common/SettingCard";
+import Setting from "./Setting";
 
 const { TabPane } = Tabs;
 
@@ -38,7 +38,7 @@ function HomeTabs() {
                 <TabPane
                     tab={<SettingOutlined className={activeTab === 'setting' ? "bg-card  p-4 rounded-10 text-para" : ''} />} key="setting"
                 >
-                    <SettingCard />
+                    <Setting />
                 </TabPane>
             </Tabs>
         </div>

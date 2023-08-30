@@ -21,13 +21,15 @@ module.exports = {
         16: "16px",
         fr: "0px, 0px, 15px, 15px",
         10: "10px",
-        15: "15px"
+        15: "15px",
+        54: "54px"
       },
       fontSize: {
         size: "15px",
         13: "13px",
-        10: "10px"
-
+        10: "10px",
+        16: "16px",
+        24: "24px"
       },
       letterSpacing: {
         2: "2px"
@@ -36,6 +38,7 @@ module.exports = {
         20: "20.43px",
         16: "16.34px",
         19: "19.5px",
+        24: "24px"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -1,7 +1,6 @@
 import { useCallback, type ReactNode, useMemo, createContext, useState, useEffect } from 'react'
 import { UseLogin, UseRegister } from '~/apis'
-import type { AuthContextType, RegisternType, loginTypes } from '~/types'
-import { message } from "antd"
+import type { AuthContextType, RegisternType, UserType, loginTypes } from '~/types'
 import { removeAxiosToken, setaxiostoken } from '~/utils/axios'
 import { Loading } from '~/components/Base'
 
@@ -9,7 +8,7 @@ const AuthContext = createContext<AuthContextType | null>(null)
 const AuthProvider = ({ children }: { children: ReactNode }) => {
     const { mutateAsync: signInWithEmailAndPassword } = UseLogin()
     const { mutateAsync: createUserWithEmailAndPassword } = UseRegister()
-    const [userdata, setuserdata] = useState<any>()
+    const [userdata, setuserdata] = useState<UserType>()
     const [loading, setloading] = useState(true)
     const [isAuthenticated, setisAuthenticated] = useState(false)
 
@@ -17,6 +16,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         try {
             createUserWithEmailAndPassword({ password, username, email }, {
                 onSuccess: (data) => {
+                    console.log("🚀 ~ file: AuthContext.tsx:20 ~ signup ~ data:", data)
                     setuserdata(data)
                     setaxiostoken(data.data.token as string)
                     localStorage.setItem("token", data.data.token as string)
@@ -34,8 +34,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         try {
             signInWithEmailAndPassword({ password, username }, {
                 onSuccess: (token) => {
-                    message.success("User Login Successful!")
-                    setuserdata(token)
                     localStorage.setItem("token", token as string)
                     if (token) {
                         setisAuthenticated(true)
