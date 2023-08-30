@@ -6,7 +6,7 @@ import BgImage from "~/components/Base/images/bg-image"
 import { useAuth } from "~/hooks"
 import { type loginTypes } from "~/types"
 const LoginPage = () => {
-    const { login, loading } = useAuth()
+    const { login, } = useAuth()
     // const [form] = useForm()
     const onFinish = async (props: loginTypes) => {
         console.log("🚀 ~ file: login.tsx:12 ~ onFinish ~ props:", props)
@@ -23,23 +23,24 @@ const LoginPage = () => {
         <div className='flex justify-center items-center mb-10'>
             <Card className="bg-bgprimary" cover={<BgImage />}>
 
-                <Typography.Title className='flex justify-center mb-7 text-primary'
+                <Typography.Title className='flex justify-center text-primary'
                     level={3}>Login  in to<span className="text-textheading ml-2">Bax RX</span>
                 </Typography.Title>
                 <SSO />
                 <Form
                     labelCol={{ span: 6 }}
                     onFinish={onFinish}
-                    disabled={loading}
-                    className='w-[358px] flex justify-center flex-col '
+                    // disabled={loading}
+                    className='w-[358px] flex justify-center flex-col mr-3   absolute right-[4px]'
                 // form={form}
                 >
                     <label className="text-primary text-[18] font-medium">UserName</label>
                     <Form.Item
                         name="username"
                         rules={[
-                            { required: true, message: 'please enter Username!' }
-                        ]}>
+                            { required: true, message: 'please enter User!' }
+                        ]}
+                    >
                         <Input type='text' placeholder='enter a email username...' />
                     </Form.Item>
                     <label className="text-primary text-[18] font-medium">Password</label>

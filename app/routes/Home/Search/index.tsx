@@ -1,14 +1,15 @@
-import { Card, Form, Input, Button, } from "antd"
+import { Card, Form, Input, Button } from "antd"
 import CardBg from '~/components/Base/CardBg'
 import { FieldTimeOutlined } from "@ant-design/icons"
 import { SearchCard } from '~/components/Common'
-import { UseGetDosage } from "~/apis/search"
 import { useState } from "react"
+import { UseGetDosage, UseGetDosageBySearch } from "~/apis/search"
 const Search = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const { data, } = UseGetDosage(searchTerm)
+    const [searchTerm, setSearchTerm] = useState("");
+    const { data: searchdata } = UseGetDosageBySearch(searchTerm)
+    const { data: getdata, } = UseGetDosage()
+    console.log("🚀 ~ file: index.tsx:11 ~ Search ~ getdata:", getdata)
     console.log("🚀 ~ file: index.tsx:10 ~ Search ~ searchTerm:", searchTerm)
-    console.log("🚀 ~ file: index.tsx:10 ~ Search ~ data:", data)
     return (
         <div>
             <Card className='bg-bgprimary'
@@ -42,23 +43,23 @@ const Search = () => {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
+                        <Card className='w-[358px] h-[133px] m'></Card>
                     </Form.Item>
                 </Form>
                 <SearchCard />
+                <div className="mt-1">
+                    <div>
+                        <div className="mt-4">
+                            {searchdata && searchdata.map((item: any) => (
+                                <Card className='w-[358px] h-[133px] m' key={item.id}>
+                                    <p>Item Name: {item.drugname}</p>
+                                    <p>Item Description: {item.zipcode}</p>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </Card>
-            {/* {isLoading ? (
-                <div>Loading...</div>
-            ) : isError ? (
-                <div>Error loading data</div>
-            ) : (
-                <List
-                    key={"1"}
-                    dataSource={data}
-                    renderItem={(item: any) => (
-                        <List.Item key={item.id}>{item.drugname}</List.Item>
-                    )}
-                />
-            )} */}
         </div>
     )
 }

@@ -4,9 +4,7 @@ import AuthTabs from "~/routes/auth";
 
 function AuthGuard({ children }: { children: ReactNode }) {
     const { isAuthenticated } = useAuth();
-    console.log("🚀 ~ file: AuthGuard.tsx:7 ~ AuthGuard ~ isAuthenticated:", isAuthenticated)
-
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
         return (
             <AuthTabs />
         )

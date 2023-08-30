@@ -7,7 +7,7 @@ const BgImage = () => {
                 <Image preview={false} src={bg1} className="w-full" />
             </div>
             <div>
-                <Image preview={false} src={bg2} className="!w-[410px] !relative" />
+                <Image preview={false} src={bg2} className=" !relative" />
             </div>
         </div>
     )

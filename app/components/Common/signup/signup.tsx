@@ -5,7 +5,7 @@ import { useAuth } from '~/hooks'
 import { type RegisternType } from "~/types"
 
 const SignUpPage = () => {
-    const { signup, loading, userdata } = useAuth()
+    const { signup, userdata } = useAuth()
     console.log("🚀 ~ file: signup.tsx:8 ~ SignUpPage ~ userdata :", userdata)
 
 
@@ -26,9 +26,9 @@ const SignUpPage = () => {
                 <Form
                     labelCol={{ span: 6 }}
                     onFinish={onFinish}
-                    className='w-[358px] flex justify-center flex-col '
+                    className='w-[358px] flex justify-center flex-col absolute right-[12px]'
 
-                    disabled={loading}
+                // disabled={loading}
                 >
                     <label className="text-primary text-[18] font-medium">UserName</label>
                     <Form.Item
@@ -58,7 +58,7 @@ const SignUpPage = () => {
                         <Input.Password placeholder='New  password...' />
                     </Form.Item>
                     <Form.Item>
-                        <Button type="primary" htmlType='submit' block loading={loading}>Sign Up</Button>
+                        <Button type="primary" htmlType='submit' block >Sign Up</Button>
                     </Form.Item>
                     <Form.Item className='flex flex-1'>
                         <Link to="/auth/login" >Already have a  account?<Button type='link' className='m-0 p-0'>Login</Button></Link>

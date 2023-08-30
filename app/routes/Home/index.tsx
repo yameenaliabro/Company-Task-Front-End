@@ -5,7 +5,8 @@ import { useState } from "react";
 import Search from "./Search";
 // import PrivacyPolicy from "./Setting/PrivacyPolicy";
 // import TermsCondition from "./Setting/TermCondition";
-import EditProfile from "./Setting/EditProfile";
+// import EditProfile from "./Setting/EditProfile";
+import SettingCard from "~/components/Common/SettingCard";
 
 const { TabPane } = Tabs;
 
@@ -24,20 +25,20 @@ function HomeTabs() {
                 className="bg-bgprimary flex justify-center mb-[30px]"
             >
                 <TabPane
-                    tab={<HomeOutlined className={activeTab === 'home' ? "bg-card   p-2 rounded-10 textp  text-para ml-3px" : 'ml-3px'} />} key="home"
+                    tab={<HomeOutlined className={activeTab === 'home' ? "bg-card   p-4 rounded-10 textp  text-para ml-3px" : 'ml-3px'} />} key="home"
                 >
                     <MainHome />
                 </TabPane>
                 <TabPane
-                    tab={<SearchOutlined className={activeTab == 'search' ? "bg-card   p-2 rounded-10 text-para" : ''} />} key="search"
+                    tab={<SearchOutlined className={activeTab == 'search' ? "bg-card   p-4 rounded-10 text-para" : ''} />} key="search"
                 >
                     <Search />
 
                 </TabPane>
                 <TabPane
-                    tab={<SettingOutlined />} key="setting"
+                    tab={<SettingOutlined className={activeTab === 'setting' ? "bg-card  p-4 rounded-10 text-para" : ''} />} key="setting"
                 >
-                    <EditProfile />
+                    <SettingCard />
                 </TabPane>
             </Tabs>
         </div>
