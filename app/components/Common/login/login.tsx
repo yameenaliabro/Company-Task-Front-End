@@ -7,13 +7,11 @@ import { useAuth } from "../../../hooks"
 import { type loginTypes } from "../../../types"
 const LoginPage = () => {
     const { login, } = useAuth()
-    // const [form] = useForm()
     const onFinish = async (props: loginTypes) => {
         console.log("🚀 ~ file: login.tsx:12 ~ onFinish ~ props:", props)
         try {
             await login(props)
             message.success("your account is sucesfully created")
-            // form.resetFields()
         } catch (error) {
             console.log(error)
         }
@@ -30,9 +28,7 @@ const LoginPage = () => {
                 <Form
                     labelCol={{ span: 6 }}
                     onFinish={onFinish}
-                    // disabled={loading}
                     className='w-[358px] flex justify-center flex-col mr-3   absolute right-[4px]'
-                // form={form}
                 >
                     <label className="text-primary text-[18] font-medium">UserName</label>
                     <Form.Item
@@ -51,9 +47,9 @@ const LoginPage = () => {
                         ]}>
                         <Input.Password type='' placeholder='enter a password...' />
                     </Form.Item>
-                    <Form.Item valuePropName="checked" className="flex flex-row">
+                    <Form.Item valuePropName="checked" className="flex flex-row justify-between">
                         <Checkbox className="text-primary">Remember me</Checkbox>
-                        <Button type="link" className="ml-8">Forgot your password?</Button>
+                        <Button type="link">Forgot your password?</Button>
                     </Form.Item>
                     <Form.Item>
                         <Button type='primary' htmlType='submit' block >Log  in</Button>

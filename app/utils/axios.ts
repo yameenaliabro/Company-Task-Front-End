@@ -1,7 +1,9 @@
+import { message } from "antd";
 import Axios from "axios";
 
 const axios = Axios.create({
     baseURL: "https://teal-zebra-coat.cyclic.app/"
+
 })
 
 axios.interceptors.response.use(
@@ -9,6 +11,7 @@ axios.interceptors.response.use(
     (err) => {
         const errorMessage = err.ree || err.message
         Promise.reject(errorMessage)
+        message.error(errorMessage)
     }
 )
 
